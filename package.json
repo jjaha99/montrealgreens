@@ -1,0 +1,24 @@
+{
+  "name": "montreaalgreens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d HomePage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjaha99/montreaalgreens.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjaha99/montreaalgreens/issues"
+  },
+  "homepage": "https://github.com/jjaha99/montreaalgreens#readme"
+}

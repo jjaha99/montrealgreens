@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Shopping Cart</title>
+    <!-- Required meta tags -->
+    <meta name="Title" content="cart-page">
+    <meta name="Author" content="Aditya Dua">
+    <meta name="Keyword" content="Supermarket, cart-page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="CSSFiles/cart.css">
+    <link rel="shortcut icon" href="Montreal_Greens.png">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!--Header-->
+    <nav>
+        <a href="#" class="logo"><img src="p4Images/MontrealGreens.png" alt=""></a>
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul class="navi">
+            <li><a href = "../Home Page/home.html", style="color: azure;">Home</a></li>
+            <li>
+                <label for ="btn-1" class="show">Aisle +</label>
+                <a href="#", style="color: azure;">Aisle</a>
+                <input type="checkbox" id="btn-1" style="text-decoration: none;">
+                <ul>
+                    <li><a href="../Dairy/dairy-eggs.html", style="color: azure;">Dairy</a></li>
+                    <li><a href="../seafood/seafood.html", style="color: azure;">Seafood</a></li>
+                    <li><a href="../snacks/snacks.html", style="color: azure;">Snacks</a></li>
+                    <li><a href="../PersonalCare/personalcare.html", style="color: azure;">Personal Care</a></li>
+                    <li><a href="../meat/meat_products.html", style="color: azure;">Meat</a></li>
+                    <li><a href="../P2(beverages)/alcohol.html", style="color: azure;">Beverage</a></li>
+                    <li><a href="../bakery/bakery.html", style="color: azure;">Bakery</a></li>
+                </ul> 
+            </li>
+            <li><a href="../searchPage.html", style="color: azure;">Search</a></li>
+            <li><a href="../profile.html", style="color: azure;">Account</a></li>
+            <li><a href="../LoginPage.html", style="color: azure;">Login</a></li>
+            <li><a href="../p4(shopping cart)/p4withB.S..html", style="color: azure;"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+
+        
+    </nav>
+
+
+    <!-- Cart -->
+
+
+    <div class="p-2 row" style="min-height: 76vh;">
+    <section class="col-12 col-lg-8">
+        <div class="container">
+            <div class="cart">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col"><h5>Product</h5></th>
+                            <th scope="col"><h5>Quantity</h5></th>
+                            <th scope="col"><h5>Subtotal</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="main">
+                                    <div class="d-flex p-2">
+                                        <img src="p4Images/spinach.jpg">
+                                    </div>
+                                    <div class="det">
+                                        <p><h6>Spinach</h6></p>
+                                        <small>Price: $3.49</small><br>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="counter">
+                                    <i class="fa fa-minus"></i>
+                                    <input class="input-number cart101" type="text" value="1" min="0" max="15">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </td>
+                            <td><h6>$3.49</h6></td>
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                <div class="main">
+                                    <div class="d-flex">
+                                        <img src="p4Images/lettuce.jpg">
+                                    </div>
+                                    <div class="det">
+                                        <p><h6>Lettuce</h6></p>
+                                        <small>Price: $2.99</small><br>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                            </td>
+                            
+                            <td>
+                                <div class="counter">
+                                    <i class="fa fa-minus"></i>
+                                    <input class="input-number cart101" type="text" value="1" min="0" max="15">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </td>
+                            <td><h6>$2.99</h6></td>
+                        </tr>
+        
+                        <tr>
+                            <td>
+                                <div class="main">
+                                    <div class="d-flex">
+                                        <img src="p4Images/milk.jpg">
+                                    </div>
+                                    <div class="det">
+                                        <p><h6>Milk</h6></p>
+                                        <small>Price: $4.69</small><br>
+                                        <button class="btn btn-danger btn-sm">Remove</button>
+                                    </div>
+                                </div>
+                            </td>
+        
+                            <td>
+                                <div class="counter">
+                                    <i class="fa fa-minus"></i>
+                                    <input class="input-number cart101" type="text" value="1" min="0" max="15">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                            </td>
+                            <td><h6>$4.69</h6></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="col-12 col-lg-4">
+    <div class="container">
+        <div class="checkout">
+            <ul class="checkMe">
+                <li>Subtotal
+                    <span>$11.17</span>
+                </li>
+                <li class="GST">GST/HST:
+                    <span>$1.68</span>
+                </li>
+                <li class="delivryCharge">Delivry Charge:
+                    <span>$5.00</span>
+                </li>
+                <li class="cart-total">Total:
+                    <span>$17.85</span>
+                </li>
+            </ul>
+            <a href="#" class="proceed-btn">Checkout</a>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!--Footer-->
+    <div class="">
+        <section style="height:200px;"></section>
+        <div class="row" style="text-align:center;">
+        </div>
+        <!----------- Footer ------------>
+        <footer class="footer-bs">
+            <div class="row ">
+                <div class="col-md-3 footer-brand animated fadeInLeft">
+                    <div class="card" style="width: 11rem; margin-bottom: 5px; border: none;">
+                        <img class="card-img-top" src="p4Images/MontrealGreens.png" alt="Card image cap">
+                    </div>
+                    <p>
+                    Montreal Greens is a low-price online 
+                    supermarket that allows you to order products across 
+                    categories like grocery, Vegetables, snacks, 
+                    meats & seafood and gets them delivered to your doorstep.
+                    </p>
+                </div>
+                <div class="col-md-3 footer-nav animated fadeInUp">
+                    <h4>Popular Category</h4>
+                    <div class="col-me-6">
+                        <ul class="pages">
+                            <li><a href="#">Snacks</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                            <li><a href="#">Beverage</a></li>
+                            <li><a href="#">Meat</a></li>
+                            <li><a href="#">Dairy</a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-ml-5 footer-nav animated fadeInDown">
+                    <h4>Quick Links</h4>
+                    <ul class="list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-social animated fadeInDown">
+                    <h4>Follow Us</h4>
+                    <ul class="navi">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 footer-nav animated fadeInDown">
+                    <span class="me-1 ">Create An Account</span>
+                    <div class="row">
+                        <div class="col-auto">
+                        <button type="button" class="btn btn-outline-light btn-small" >
+                        Sign up!
+                        </button>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <section class = "row-sm-6" style="text-align:center; margin: 15px auto;"><p>© 2021 Montreal Greens, All rights reserved.</p></section>
+        
+    
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

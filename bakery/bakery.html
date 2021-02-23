@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Title" content="Bakery">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bakery</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>      
+        
+        <!--CSS for header and footer-->
+        <link rel="stylesheet" href="head.css">
+        <link rel="stylesheet" href="foty.css">
+
+        <style>
+            .img-header{
+                height: 300px;
+                object-fit: cover;
+              }
+            .img-p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: rgb(234, 247, 230);
+                font-size: 400%;
+            }
+
+            .divCard{
+              margin-top: 1%;
+              margin-bottom: 1%;
+            }
+            .marginCard{
+              margin-top: 1%;
+            }
+
+            body{
+              position: relative;
+              min-height: 100vh;
+            }
+    
+            footer{    
+              position: absolute;
+              bottom: 0;   
+            }
+        </style>    
+    </head>
+    <body>
+
+        <nav>
+            <a href="#" class="logo"><img src="Screenshot__452_-removebg-preview.png" alt=""></a>
+            <label for="btn" class="icon">
+                <span class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+              li><a href = "../Home Page/home.html", style="color: azure;">Home</a></li>
+              <li>
+                  <label for ="btn-1" class="show">Aisle +</label>
+                  <a href="#", style="color: azure;">Aisle</a>
+                  <input type="checkbox" id="btn-1" style="text-decoration: none;">
+                  <ul>
+                      <li><a href="../Dairy/dairy-eggs.html", style="color: azure;">Dairy</a></li>
+                      <li><a href="../seafood/seafood.html", style="color: azure;">Seafood</a></li>
+                      <li><a href="../snacks/snacks.html", style="color: azure;">Snacks</a></li>
+                      <li><a href="../PersonalCare/personalcare.html", style="color: azure;">Personal Care</a></li>
+                      <li><a href="../meat/meat_products.html", style="color: azure;">Meat</a></li>
+                      <li><a href="../P2(beverages)/alcohol.html", style="color: azure;">Beverage</a></li>
+                      <li><a href="../bakery/bakery.html", style="color: azure;">Bakery</a></li>
+                  </ul> 
+              </li>
+              <li><a href="../searchPage.html", style="color: azure;">Search</a></li>
+              <li><a href="../profile.html", style="color: azure;">Account</a></li>
+              <li><a href="../LoginPage.html", style="color: azure;">Login</a></li>
+              <li><a href="../p4(shopping cart)/p4withB.S..html", style="color: azure;"><i class="fa fa-shopping-cart"></i></a></li>
+            </ul>
+    
+            
+        </nav>
+        
+        <header>
+            <div style="position: relative;">
+                <img src="Photos/bakery.jpg"   class="w-100 img-header" alt="bakery image">
+                <h2 class="img-p">Bakery</h2>
+            </div>     
+        </header>
+
+        <div class="container">
+          <div class="row divCard">
+            <!--For products-->
+            <div class="col-sm-4 marginCard">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="Photos/bread.jpg" alt="Bread image">
+                <div class="card-body">
+                  <h5 class="card-title">Villaggio bread</h5>
+                  <p class="card-text">Pain de Villaggio</p>
+                  <p class="card-text">$2.97</p>
+                  <a href="bread.html" class="btn btn-primary">See info</a>
+                  <a href="#" class="btn btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                      <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                    Cart</a><br>
+                    <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                    <small>Add to wish-list</small></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 marginCard">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="Photos/cupcakes.jpg" alt="Cupcake image">
+                <div class="card-body">
+                  <h5 class="card-title">Chocolate cupcakes</h5>
+                  <p class="card-text">Cupcakes au chocolat &nbsp<small>(10 pieces)</small></p>
+                  <p class="card-text">$25.00</p>
+                  <a href="cupcake.html" class="btn btn-primary">See info</a>
+                  <a href="#" class="btn btn-success"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                      <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                    Cart</a><br>
+                    <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                    <small>Add to wish-list</small></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 marginCard">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="Photos/raspberry_macarons.jpg" alt="Raspberry Macarons image">
+                <div class="card-body">
+                  <h5 class="card-title">Raspberry Macarons</h5>
+                  <p class="card-text">Macarons aux framboises &nbsp<small>(12 pieces)</small></p>
+                  <p class="card-text">$30.00</p>
+                  <a href="macarons.html" class="btn btn-primary">See info</a>
+                  <a href="#" class="btn btn-success"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                      <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                    Cart</a><br>
+                    <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                    <small>Add to wish-list</small></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 marginCard">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="Photos/blueberry_cheesecake.jpg" alt="Blueberry Cheesecake image">
+                <div class="card-body">
+                  <h5 class="card-title">Blueberry Cheesecake</h5>
+                  <p class="card-text">Gateau de formage aux myrtilles</p>
+                  <p class="card-text">$45.99</p>
+                  <a href="cheesecake.html" class="btn btn-primary">See info</a>
+                  <a href="#" class="btn btn-success"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                      <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                    </svg>
+                    Cart</a><br>
+                    <a href="#" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                      <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                    <small>Add to wish-list</small></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4 marginCard">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="Photos/strawberry_donut.jpg" alt="Strawberry Donut image">
+                  <div class="card-body">
+                    <h5 class="card-title">Strawberry Donut</h5>
+                    <p class="card-text">Beignet aux fraises</p>
+                    <p class="card-text">$5.00</p>
+                    <a href="donut.html" class="btn btn-primary">See info</a>
+                    <a href="#" class="btn btn-success"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                      </svg>
+                      Cart</a><br>
+                      <a href="#" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg>
+                      <small>Add to wish-list</small></a>
+                  </div>
+                </div>
+              </div> 
+          
+
+            <div class="col-sm-4 marginCard">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="Photos/multigrain_bread.jpg" alt="Multigrain Bread image">
+              <div class="card-body">
+                <h5 class="card-title">Multigrain Bread</h5>
+                <p class="card-text">Pain a graims multiples</p>
+                <p class="card-text">$4.29</p>
+                <a href="multigrain_bread.html" class="btn btn-primary">See info</a>
+                <a href="#" class="btn btn-success"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                    <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg>
+                  Cart</a><br>
+                  <a href="#" class="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+                  <small>Add to wish-list</small></a>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>
+        <br><br><br><br><br><br>
+        
+        <div class="">
+            <section style="height:200px;"></section>
+            <div class="row" style="text-align:center;">
+            </div>
+            <!----------- Footer ------------>
+            <footer class="footer-bs">
+                <div class="row ">
+                    <div class="col-md-3 footer-brand animated fadeInLeft">
+                        <div class="card" style="width: 12rem; margin-bottom: 5px; border: none;">
+                            <img class="card-img-top" src="Screenshot__452_-removebg-preview.png" alt="Card image cap">
+                        </div>
+                        <p>
+                        Montreal Green is a low-price online 
+                        supermarket that allows you to order products across 
+                        categories like grocery, Vegetables, snacks, 
+                        meats & seafood and gets them delivered to your doorstep.
+                        </p>
+                    </div>
+                    <div class="col-md-3 footer-nav animated fadeInUp">
+                        <h4>Popular Category</h4>
+                        <div class="col-me-6">
+                            <ul class="pages">
+                                <li><a href="#">Snacks</a></li>
+                                <li><a href="#">Personal Care</a></li>
+                                <li><a href="#">Beverage</a></li>
+                                <li><a href="#">Seafood</a></li>
+                                <li><a href="#">Dairy</a></li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-ml-5 footer-nav animated fadeInDown">
+                        <h4>Quick Links</h4>
+                        <ul class="list">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Aisle</a></li>
+                            <li><a href="#">Admin</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer-social animated fadeInDown">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer-nav animated fadeInDown">
+                        <span class="md-2" style="font-size: medium;">Create an Account</span>
+                        <div class="row">
+                            <div class="col-auto">
+                            <button type="button" class="btn btn-outline-light btn-small" >
+                            Sign up!
+                            </button>
+                            <br>
+                            <a href="../backend/login.html" class="btn btn-info" role="button">Admin Login</a>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <section class = "row-sm-6" style="text-align:center; margin: 15px auto;"><p>© 2021 Montreal Greens, All rights reserved.</p></section>
+        </div>
+        
+    </body>
+</html>
