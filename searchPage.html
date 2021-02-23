@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_searchbar.css">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative;
+            min-height: 100vh;
+        }
+
+        footer{
+          position: absolute;
+          bottom: 0;
+        }
+
+        .cardForm{
+            margin-top: 20px;
+             
+        }
+        nav{
+background: #000000;
+}
+
+        nav::after{
+content: '';
+clear: both;
+display: table;
+}
+
+
+
+
+nav .logo{
+float: left;
+height: 70px;
+padding-top: 12px;
+padding-left: 60px;
+
+
+}
+
+
+.logo img{
+margin-left: -10px;
+width: 180px;
+}
+
+
+nav ul{
+float:right;
+list-style: none;
+margin-right: 90px;
+
+}
+
+nav ul li{
+display: inline-block;
+background: black;
+margin: 0 5px;
+}
+
+nav ul li a{
+line-height: 70px;
+color: white;
+letter-spacing: 2px;
+transition: 2s;
+font-size: 18px;
+padding: 8px 15px;
+
+
+}
+
+
+nav ul li a:hover{
+transition: 0.6s;
+color: cyan;
+box-shadow: 0 0 5px #13eb5b, 0 0 5px #16eb87;
+border-radius: 5px;
+
+}
+
+
+nav ul ul li a:hover{
+transition: 0.6s;
+color: cyan;
+box-shadow: 0 0 5px #13eb5b, 0 0 5px #16eb87;
+
+
+}
+
+
+nav ul ul{
+z-index: 2;
+position: absolute;
+top:80px;
+margin-left: -50px;
+opacity: 0;
+visibility: hidden;
+transition: top 0.3s;
+
+}
+
+nav ul li:hover > ul{
+top: 70px;
+opacity: 1;
+visibility: visible;
+}
+nav ul ul li{
+position:relative;
+margin: 0px;
+width: 210px;
+text-align: center;
+
+float: none;
+display:list-item;
+border-bottom:1px solid rgba(0,0,0,0.3);
+}
+
+nav ul ul li a{
+line-height: 50px;
+font-size: medium;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <img src="Screenshot__452_-removebg-preview.png" alt="">
+            <a href = "../Home Page/home.html", style="color: azure;">Home</a></li>
+                <li>
+                    <label for ="btn-1" class="show">Aisle +</label>
+                    <a href="#", style="color: azure;">Aisle</a>
+                    <ul>
+                        <li><a href="../Dairy/dairy-eggs.html", style="color: azure;">Dairy</a></li>
+                        <li><a href="../seafood/seafood.html", style="color: azure;">Seafood</a></li>
+                        <li><a href="../snacks/snacks.html", style="color: azure;">Snacks</a></li>
+                        <li><a href="../PersonalCare/personalcare.html", style="color: azure;">Personal Care</a></li>
+                        <li><a href="../meat/meat_products.html", style="color: azure;">Meat</a></li>
+                        <li><a href="../P2(beverages)/alcohol.html", style="color: azure;">Beverage</a></li>
+                        <li><a href="../bakery/bakery.html", style="color: azure;">Bakery</a></li>
+                    </ul> 
+                </li>
+                <li><a href="../searchPage.html", style="color: azure;">Search</a></li>
+                <li><a href="../profile.html", style="color: azure;">Account</a></li>
+                <li><a href="../LoginPage.html", style="color: azure;">Login</a></li>
+                <li><a href="../p4(shopping cart)/p4withB.S..html", style="color: azure;"><i class="fa fa-shopping-cart"></i></a></li>
+
+        
+    </nav>
+    <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What are you looking for?">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+     </div>
+
+
+     
+   
+    
+
+     <footer class="footer-bs">
+        <section class = "row-sm-6" style="text-align:center; margin: 15px auto;"><p>© 2021 Montreal Greens, All rights reserved.</p></section>
+     </footer>
+</body>
+</html>

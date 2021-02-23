@@ -1,0 +1,652 @@
+<!--
+    I had some isue with the css so I need it to do some little modification.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Title" content="Edit products">
+        <meta name="Author" content="Manuel Beir-Alarcon">
+        <meta name="Keyword" content="Supermarket, Edit products">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Edit products</title>
+        <!-- Bootstrap CSS -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
+        <script src="https://kit.fontawesome.com/e30f0a536e.js" crossorigin="anonymous"></script>    
+
+            <style>
+                
+                *{
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+                  font-family: Poppins, sans-serif;
+
+              }
+
+              a{
+                  text-decoration: none;
+              }
+              nav{
+                  background: #000000;
+              }
+
+
+
+              nav::after{
+                  content: '';
+                  clear: both;
+                  display: table;
+              }
+
+
+
+
+              nav .logo{
+                  float: left;
+                  height: 70px;
+                  padding-top: 12px;
+                  padding-left: 58px;
+
+
+              }
+
+
+              .logo img{
+                  margin-left: -23px;
+                  width: 200px;
+                  height: 55px;
+                  margin-top: -2px;
+              }
+
+
+              nav ul{
+                  float:right;
+                  list-style: none;
+                  margin-right: 90px;
+                
+              }
+
+              nav ul li{
+                  display: inline-block;
+                  background: black;
+                  margin: 0 5px;
+              }
+
+              nav ul li a{
+                  line-height: 70px;
+                  color: white;
+                  letter-spacing: 2px;
+                  transition: 2s;
+                  font-size: 18px;
+                  padding: 8px 15px;
+
+
+              }
+
+
+              nav ul li a:hover{
+                  transition: 0.3s;
+                  box-shadow: 0 0 5px #3aeff5, 0 0 5px #37e9e9;
+                  border-radius: 5px;
+
+              }
+
+
+              nav ul ul li a:hover{
+                  transition: 0.3s;
+                  box-shadow: 0 0 5px #13eb5b, 0 0 5px #16eb87;
+
+
+              }
+
+
+              nav ul ul{
+                  position: absolute;
+                  top:80px;
+                  margin-left: -50px;
+                  opacity: 0;
+                  visibility: hidden;
+                  transition: top 0.3s;
+                  z-index: 2;
+
+              }
+
+              nav ul li:hover > ul{
+                  top: 70px;
+                  opacity: 1;
+                  visibility: visible;
+              }
+              nav ul ul li{
+                  position:relative;
+                  margin: 0px;
+                  width: 210px;
+                  text-align: center;
+
+                  float: none;
+                  display:list-item;
+                  border-bottom:1px solid rgba(0,0,0,0.3);
+              }
+
+              nav ul ul li a{
+                  line-height: 50px;
+                  font-size: 15px;
+              }
+
+              .show,.icon{
+                  display: none;
+              }
+
+              @media all and (max-width: 968px){
+                  nav ul{
+                      margin-right:0px; 
+                      float: left;
+                  }
+
+                  nav .logo{
+                      width: 100%;
+                      padding-left: 30px;
+                  }
+
+                  nav ul li, nav ul ul li{
+                      display: block;
+                      width: 100%;
+                      border-radius: 5px;
+                  }
+
+                  nav ul ul{
+                      top: 78px;
+                      position: static;
+                      border-top: none;
+                      float: none;
+                      display: none;
+                      opacity: 1;
+                      visibility: visible;
+                      z-index: 1;
+                      margin-left: 9px;
+                  }
+
+                  
+                  nav ul ul li{
+                      border-bottom: 0px;
+                  }
+
+                  .show{
+                      display: block;
+                      color: white;
+                      font-size: 18px;
+                      padding: 0 17px;
+                      line-height: 70px;
+                      cursor: pointer;
+                      letter-spacing: 2px;
+                      transition: 0.3s;
+                  }
+                  .icon{
+                      display: block;
+                      color: white;
+                      position:absolute;
+                      margin-top: 21px ;
+                      right: 40px;
+                      line-height: 70px;
+                      font-size: 25px;
+                      cursor:pointer;
+
+                  }
+                  nav ul li a:hover{
+                  }
+
+                  .show + a, ul{
+                      display: none;
+                  }
+
+                  [id^=btn]:checked + ul{
+                      display: block;
+                  }
+
+                  .show:hover{
+                      color:cyan;
+                      transition: 0.3s;
+
+                  }
+
+              }
+
+            .footer-bs {
+              background-color: #3c3d41;
+              padding: 60px 40px;
+              color: rgba(255,255,255,1.00);
+              margin-bottom: 20px;
+              border-bottom-right-radius: 6px;
+              border-top-left-radius: 0px;
+              border-bottom-left-radius: 6px;
+              }
+              .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+              .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+              .footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+              .footer-bs .footer-brand p { font-size:14px; color:rgba(255, 241, 241, 0.952);}
+              .footer-bs .footer-brand .card{
+                margin-left: -13px;
+                background: transparent;
+              }
+
+
+              .footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+              .footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+              .footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+              .footer-bs .footer-nav ul.pages a:hover { color:rgba(24, 182, 45, 0.8); text-decoration:none; }
+              .footer-bs .footer-nav h4 {
+              font-size: 11px;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              margin-bottom:10px;
+              }
+
+
+              .footer-bs .footer-nav ul.list { list-style:none; padding:0px;}
+              .footer-bs .footer-nav ul.list li { padding:5px 0px;}
+              .footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+              .footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+              .footer-bs .footer-social ul { list-style:none; padding:0px; }
+              .footer-bs .footer-social h4 {
+              font-size: 11px;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              }
+              .footer-bs .footer-social li { padding:5px 4px;}
+              .footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+              .footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+              .footer-bs .footer-ns h4 {
+              font-size: 11px;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              margin-bottom:10px;
+              }
+              .footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+              @media (min-width: 768px) {
+              .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+  
+              
+              
+
+              
+  
+              
+          </style>     
+    </head>
+    <body>
+      <nav>
+        <a href="#" class="logo"><img src="../montrealgreens/pictures/logo.png" alt=""></a>
+        <label for="btn" class="icon">
+            <span class="fa fa-bars"></span>
+        </label>
+        <input style="display: none;" type="checkbox" id="btn">
+        <ul>
+            <li><a href = "../montrealgreens/index.html", style="color: azure;">Home</a></li>
+            <li>
+                <label for ="btn-1" class="show">Aisle +</label>
+                <a href="#", style="color: azure;">Aisle</a>
+                <input type="checkbox" id="btn-1" style="text-decoration: none; display: none;">
+                <ul>
+                    <li><a href="../montrealgreens/meat/meat_products.html", style="color: azure;">Meat</a></li>
+                    <li><a href="../montrealgreens/seafood/seafood.html", style="color: azure;">Seafood</a></li>
+                    <li><a href="../montrealgreens/snacks/snacks.html", style="color: azure;">Snacks</a></li>
+                    <li><a href="../montrealgreens/PersonalCare/personalcare.html", style="color: azure;">Personal Care</a></li>
+                    <li><a href="../montrealgreens/Dairy/dairy-eggs.html", style="color: azure;">Dairy & Eggs</a></li>
+                    <li><a href="#", style="color: azure;">Beverage</a></li>
+                    <li><a href="#", style="color: azure;">Bakery</a></li>
+                </ul> 
+            </li>
+            <li><a href="#", style="color: azure;">About us</a></li>
+            <li><a href="#", style="color: azure;">Contact</a></li>
+            <li><a href="#", style="color: azure;">Account</a></li>
+            <li><a href="#", style="color: azure;"><i class="fa fa-shopping-cart"></i></a></li>
+        </ul>    
+    </nav>
+        
+
+    <div class="container bootstrap snippet">
+        <div class="row">
+              <div class="col-sm-10"><h1>Big Chungus</h1></div>
+            
+        </div>
+        <div class="row">
+              <div class="col-sm-3"><!--left col-->
+                  
+    
+          <div class="text-center">
+            <img src="../montrealgreens/pictures/big-chungus.png" class="avatar img-circle img-thumbnail" alt="avatar">
+            <h6>Upload a different photo...</h6>
+            <input type="file" class="text-center center-block file-upload">
+          </div></hr><br>
+              
+              
+        <ul class="list-group">
+            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            <a href=""><li class="list-group-item text-right"><span class="pull-left"><strong>Current Purchase</strong></span> Total $125</li></a>
+            <a href=""><li class="list-group-item text-right"><span class="pull-left"><strong>Last Purchase</strong></span> Total $13</li></a>
+            <a href=""><li class="list-group-item text-right"><span class="pull-left"><strong>Favorite food</strong></span> 37 Items</li></a>
+        </ul> 
+              
+            </div><!--/col-3-->
+            <div class="col-sm-9">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+                    <!--<li><a data-toggle="tab" href="#messages">Menu 1</a></li>
+                    <li><a data-toggle="tab" href="#settings">Menu 2</a></li>-->
+                  </ul>
+    
+                  
+              <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <hr>
+                      <form class="form" action="##" method="post" id="registrationForm">
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="first_name"><h4>First name</h4></label>
+                                  <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                <label for="last_name"><h4>Last name</h4></label>
+                                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                              </div>
+                          </div>
+              
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="phone"><h4>Phone</h4></label>
+                                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                              </div>
+                          </div>
+              
+                          <div class="form-group">
+                              <div class="col-xs-6">
+                                 <label for="mobile"><h4>Mobile</h4></label>
+                                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="email"><h4>Email</h4></label>
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="email"><h4>Location</h4></label>
+                                  <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="password"><h4>Password</h4></label>
+                                  <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                <label for="password2"><h4>Verify</h4></label>
+                                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                               <div class="col-xs-12">
+                                    <br>
+                                      <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                       <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                </div>
+                          </div>
+                      </form>
+                  
+                  <hr>
+                  
+                 </div><!--/tab-pane-->
+                 <div class="tab-pane" id="messages">
+                   
+                   <h2></h2>
+                   
+                   <hr>
+                      <form class="form" action="##" method="post" id="registrationForm">
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="first_name"><h4>First name</h4></label>
+                                  <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                <label for="last_name"><h4>Last name</h4></label>
+                                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                              </div>
+                          </div>
+              
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="phone"><h4>Phone</h4></label>
+                                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                              </div>
+                          </div>
+              
+                          <div class="form-group">
+                              <div class="col-xs-6">
+                                 <label for="mobile"><h4>Mobile</h4></label>
+                                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="email"><h4>Email</h4></label>
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="email"><h4>Location</h4></label>
+                                  <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="password"><h4>Password</h4></label>
+                                  <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                <label for="password2"><h4>Verify</h4></label>
+                                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                               <div class="col-xs-12">
+                                    <br>
+                                      <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                       <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                </div>
+                          </div>
+                      </form>
+                   
+                 </div><!--/tab-pane-->
+                 <div class="tab-pane" id="settings">
+                        
+                       
+                      <hr>
+                      <form class="form" action="##" method="post" id="registrationForm">
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="first_name"><h4>First name</h4></label>
+                                  <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                <label for="last_name"><h4>Last name</h4></label>
+                                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                              </div>
+                          </div>
+              
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="phone"><h4>Phone</h4></label>
+                                  <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                              </div>
+                          </div>
+              
+                          <div class="form-group">
+                              <div class="col-xs-6">
+                                 <label for="mobile"><h4>Mobile</h4></label>
+                                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="email"><h4>Email</h4></label>
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="email"><h4>Location</h4></label>
+                                  <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                  <label for="password"><h4>Password</h4></label>
+                                  <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              
+                              <div class="col-xs-6">
+                                <label for="password2"><h4>Verify</h4></label>
+                                  <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                               <div class="col-xs-12">
+                                    <br>
+                                      <button class="btn btn-lg btn-success pull-right" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                       <!--<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>-->
+                                </div>
+                          </div>
+                      </form>
+                  </div>
+                   
+                  </div><!--/tab-pane-->
+              </div><!--/tab-content-->
+    
+            </div><!--/col-9-->
+        </div><!--/row-->
+    </div>    
+        
+
+
+
+        <div class="">
+          <section style="height:200px;"></section>
+          <div class="row" style="text-align:center;">
+          </div>
+          <!----------- Footer ------------>
+          <footer class="footer-bs">
+              <div class="row ">
+                  <div class="col-md-3 footer-brand animated fadeInLeft">
+                      <div class="card" style="width: 12rem; margin-bottom: 5px; border: none;">
+                          <img class="card-img-top" src="../montrealgreens/pictures/logo.png" alt="Card image cap">
+                      </div>
+                      <p>
+                      Montreal Green is a low-price online 
+                      supermarket that allows you to order products across 
+                      categories like grocery, Vegetables, snacks, 
+                      meats & seafood and gets them delivered to your doorstep.
+                      </p>
+                  </div>
+                  <div class="col-md-3 footer-nav animated fadeInUp">
+                      <h4>Popular Category</h4>
+                      <div class="col-me-6">
+                          <ul class="pages">
+                              <li><a href="#">Snacks</a></li>
+                              <li><a href="#">Personal Care</a></li>
+                              <li><a href="#">Beverage</a></li>
+                              <li><a href="#">Seafood</a></li>
+                              <li><a href="#">Dairy</a></li>
+                          </ul>
+                      </div>
+                      
+                      
+                  </div>
+                  <div class="col-ml-5 footer-nav animated fadeInDown">
+                      <h4>Quick Links</h4>
+                      <ul class="list">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Aisle</a></li>
+                          <li><a href="#">Admin</a></li>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-2 footer-social animated fadeInDown">
+                      <h4>Follow Us</h4>
+                      <ul>
+                          <li><a href="#">Facebook</a></li>
+                          <li><a href="#">Twitter</a></li>
+                          <li><a href="#">Instagram</a></li>
+                          <li><a href="#">Pinterest</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-2 footer-nav animated fadeInDown">
+                      <span class="md-2" style="font-size: medium;">Create an Account</span>
+                      <div class="row">
+                          <div class="col-auto">
+                          <button type="button" class="btn btn-outline-light btn-small" >
+                          Sign up!
+                          </button>
+                      </div>
+                      
+                      </div>
+                  </div>
+              </div>
+          </footer>
+          <section class = "row-sm-6" style="text-align:center; margin: 15px auto;"><p>© 2021 Montreal Greens, All rights reserved.</p></section>
+          
+      
+      </div>
+        
+        
+    </body>
+    <script>
+    
+    </script>
+</html>
